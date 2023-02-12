@@ -1,19 +1,19 @@
-// account class
+//Account class
 abstract class Account{
     Acc_No:number;
     Balance:number;
-    debAmount(){}
-    creidAmount(){}
+    debitAmount(){}
+    creditAmount(){}
     getBalance(){}
 }
-// iaccount class
+// IAccount class
 
 interface IAccount{
    Date_Of_Opening:number;
-   addCustmer()
-   removeCustmer()
+   addCustomer()
+   removeCustomer()
 }
-// saving_account class
+// Saving_account class
 
 class Saving_Account extends Account implements IAccount {
    Date_Of_Opening: number;
@@ -26,15 +26,15 @@ class Saving_Account extends Account implements IAccount {
        throw new Error("Method not implemented.");
    }
 }
-// current_account class
+// Current_account class
 class Current_Account extends Account implements IAccount {
    Date_Of_Opening: number;
    Inerrest_Rate:number;
 
-   addCustmer() {
+   addCustomer() {
        throw new Error("Method not implemented.");
    }
-   removeCustmer() {
+   removeCustomer() {
        throw new Error("Method not implemented.");
    }
 }
